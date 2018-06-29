@@ -1,0 +1,42 @@
+/*Layout style*/
+/*--- HEADER ---*/
+#header{
+    vertical-align: baseline;
+    padding: 1%;
+}
+#cart{
+    text-align: right;
+}
+nav.navbar-inverse{
+    text-transform: uppercase;
+}
+
+nav.navbar{
+    margin-bottom: 5px;
+}
+#slide-show{
+    height: 220px;
+}
+.service{
+    height: 100px;
+    border: 1px solid gainsboro;
+    text-align: justify;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#product-header{
+    border-bottom: 1px solid gainsboro;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top:5px;
+}
+
+#product-list{
+    margin-top: 20px;
+}
+
+#product-item{
+    text-align: center;
+}
