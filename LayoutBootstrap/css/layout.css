@@ -7,15 +7,20 @@
 #cart{
     text-align: right;
 }
+
+.navbar{
+    border-radius: 0px;
+    min-height: 20px;
+}
 nav.navbar-inverse{
     text-transform: uppercase;
 }
-
 nav.navbar{
     margin-bottom: 5px;
 }
 #slide-show{
     height: 220px;
+    border: 1px solid gainsboro;
 }
 .service{
     height: 100px;
@@ -34,9 +39,15 @@ nav.navbar{
 }
 
 #product-list{
-    margin-top: 20px;
+    margin-top: 10px;
 }
-
 #product-item{
     text-align: center;
+    border: 1px solid gainsboro;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 250px;
+}
+#product-item:hover{
+    border: 1px solid red;
 }
