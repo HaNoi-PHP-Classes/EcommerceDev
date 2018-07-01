@@ -28,6 +28,8 @@ nav.navbar{
     text-align: justify;
     padding: 10px;
     margin-bottom: 5px;
+    position: relative;
+    right: -15px;
 }
 
 #product-header{
@@ -41,13 +43,65 @@ nav.navbar{
 #product-list{
     margin-top: 10px;
 }
-#product-item{
+
+#product-list .item-product{
+    margin:0px;padding: 0px;
+}
+
+.item-product{
     text-align: center;
     border: 1px solid gainsboro;
     padding-top: 10px;
     padding-bottom: 10px;
-    height: 250px;
+    height: 300px;
+    margin-bottom: 20px;
 }
-#product-item:hover{
+.item-product:hover{
     border: 1px solid red;
 }
+
+.item-img{
+    height: 70%;
+}
+.item-img img{
+    height: 100%;
+    width: 100%;
+}
+
+.buy{
+    background-color: orangered;
+    position: relative;
+    margin-top: -20px;
+    z-index: -1;
+}
+.item-name{
+    margin-top: 30px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.item-price{
+    margin-top: 5px;
+}
+.old-price{
+    position: relative;
+    float: right;
+    text-align: right;
+    text-decoration: line-through;
+}
+.new-price{
+    position: relative;
+    float: left;
+    text-align: left;
+    color: red;
+    font-weight: bold;
+}
+
+
+#menu-right{
+    border: 1px solid gainsboro;
+    position: relative;
+    right: -15px;
+    height: 520px;
+}
+
