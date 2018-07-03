@@ -22,19 +22,22 @@ nav.navbar{
 #slide-show{
     height: 220px;
     border: 1px solid gainsboro;
+    
 }
 
 #slide-show-hot{
     border: 1px solid gainsboro;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 .service{
-    height: 100px;
+    height: 107px;
     border: 1px solid gainsboro;
     text-align: justify;
-    padding: 10px;
     margin-bottom: 5px;
     position: relative;
     right: -15px;
+    margin-left: -11px;
 }
 
 #product-header{
@@ -50,6 +53,8 @@ nav.navbar{
 }
 
 #product-list .item-product{
+    padding-left: 0px;
+    padding-right: 0px;
 }
 #product{
     padding-left: 0px;
@@ -59,8 +64,8 @@ nav.navbar{
     text-align: center;
     border: 1px solid gainsboro;
     padding-top: 10px;
-    padding-bottom: 10px;
-    height: 300px;
+    padding-bottom: 5px;
+    height: 296px;
     margin-bottom: 10px;
 }
 .item-product:hover{
@@ -82,9 +87,10 @@ nav.navbar{
     z-index: -1;
 }
 .item-name{
-    margin-top: 30px;
+    margin-top: 23px;
     text-align: left;
     text-transform: uppercase;
+    padding-left: 10px;
 }
 
 .item-price{
@@ -95,6 +101,7 @@ nav.navbar{
     float: right;
     text-align: right;
     text-decoration: line-through;
+    padding-right: 10px;
 }
 .new-price{
     position: relative;
@@ -102,12 +109,18 @@ nav.navbar{
     text-align: left;
     color: red;
     font-weight: bold;
+    padding-left: 10px;
 }
 
+#right{
+    padding-left: 0px;
+    padding-right: 15px;
+}
 
 #menu-right{
     border: 1px solid gainsboro;
     position: relative;
     right: -15px;
     height: 520px;
+    padding-left: 0px;
 }
