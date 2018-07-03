@@ -1,3 +1,4 @@
+
 /*Layout style*/
 /*--- HEADER ---*/
 #header{
@@ -20,6 +21,10 @@ nav.navbar{
 }
 #slide-show{
     height: 220px;
+    border: 1px solid gainsboro;
+}
+
+#slide-show-hot{
     border: 1px solid gainsboro;
 }
 .service{
@@ -104,4 +109,3 @@ nav.navbar{
     right: -15px;
     height: 520px;
 }
-
