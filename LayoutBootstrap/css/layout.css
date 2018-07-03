@@ -50,16 +50,18 @@ nav.navbar{
 }
 
 #product-list .item-product{
-    margin:0px;padding: 0px;
 }
-
+#product{
+    padding-left: 0px;
+    padding-right: 0px;
+}
 .item-product{
     text-align: center;
     border: 1px solid gainsboro;
     padding-top: 10px;
     padding-bottom: 10px;
     height: 300px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .item-product:hover{
     border: 1px solid red;
