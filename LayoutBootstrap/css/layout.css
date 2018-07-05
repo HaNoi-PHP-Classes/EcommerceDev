@@ -124,3 +124,18 @@ nav.navbar{
     height: 520px;
     padding-left: 0px;
 }
+
+#footer-menu{
+    background-color:#333;
+    color:white;
+}
+#footer-menu h3{
+    text-transform: uppercase;
+}
+#footer-copyright{
+    text-align: center;
+    background-color: #000;
+    color: #fff; 
+    height: 50px;
+    padding-top: 13px;
+}
