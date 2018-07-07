@@ -9,6 +9,10 @@
     text-align: right;
 }
 
+.btn .badge {
+    top:-11px;
+}
+
 .navbar{
     border-radius: 0px;
     min-height: 20px;
@@ -21,14 +25,15 @@ nav.navbar{
 }
 #slide-show{
     height: 220px;
-    border: 1px solid gainsboro;
     
 }
 
 #slide-show-hot{
-    border: 1px solid gainsboro;
     padding-left: 0px;
     padding-right: 0px;
+}
+.carousel-inner>.item>img{
+    height: 217px;
 }
 .service{
     height: 107px;
