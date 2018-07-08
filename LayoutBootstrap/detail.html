@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/effect.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="favicon.png">
+    <script>
+        $(window).resize(function () {
+            if ($(this).width() < 1024) {
+                //An|Hien|Add|Remove class cho menu-right khi thay doi kich thuoc man hinh
+                $("#right").hide();
+                $("div#product").removeClass("col-sm-9");
+                $("div#product").addClass("col-sm-12");
+
+                //An|Hien|Add|Remove class cho menu-right khi thay doi kich thuoc man hinh
+                $("#service").hide();
+                $("div#slide-show-hot").removeClass("col-sm-9");
+                $("div#slide-show-hot").addClass("col-sm-12");
+
+                $("#search").hide();
+            }
+            else {
+                $("#right").show();
+                $("div#product").removeClass("col-sm-12");
+                $("div#product").addClass("col-sm-9");
+
+                $("#service").show();
+                $("div#slide-show-hot").removeClass("col-sm-12");
+                $("div#slide-show-hot").addClass("col-sm-9");
+
+                $("#search").show();
+            }
+        });
+
+
+    </script>
+    <title>Chi tiết sản phẩm</title>
+</head>
+<body>
+    <div class="container-fluid" id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3 col-sm-3" id="logo">
+                    <img src="image/logo.png" alt="logo" width="110px" height="40px">
+                </div>
+                <div class="col-xs-6  col-sm-6">
+                    <div class="container-fluid">
+                        <div class="row" id="search">
+                            <div class="col-sm-8" style="padding-right: 1px;">
+                                <input type="search" name="txtSearch" id="txtSearch" placeholder="Nhập từ khoá tìm kiếm">
+                            </div>
+                            <div class="col-sm-3" style="padding: 0px;">
+                                <div id="select-box">
+                                    <select name="categoryId">
+                                        <option value="" selected>Tất cả danh mục</option>
+                                        <option value="nam">Thời trang Nam</option>
+                                        <option value="nu">Thời trang Nữ</option>
+                                        <option value="treem">Thời trang Trẻ em</option>
+                                        <option value="phukien">Phụ kiện</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-1" style="padding: 0px;">
+                                <button type="button" id="btnSearch">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3  col-sm-3" id="cart">
+                    <button type="button" class="btn btn-default">
+                        <i class="fa fa-cart-arrow-down" style="font-size: 24px;"></i>
+                        <span class="badge">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end Header-->
+    
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <span class="glyphicon glyphicon-home"></span>
+                    </a>
+                </div>
+    
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#">Sản phẩm bán chạy</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Nam
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Áo sơ mi</a>
+                                </li>
+                                <li>
+                                    <a href="#">Áo thun</a>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    <a href="#">Quần jean</a>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    <a href="#">Quần thể thao</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Nữ</a>
+                        </li>
+                        <li>
+                            <a href="#">Trẻ em</a>
+                        </li>
+                        <li>
+                            <a href="#">Phụ kiện</a>
+                        </li>
+                        <li>
+                            <a href="#">Dịch vụ</a>
+                        </li>
+                        <li>
+                            <a href="#">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--end Navigation bar-->
+
+    
+
+    <div class="container-fluid" id="footer-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 footer-item">
+                    <h3>Danh muc giam gia</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, repudiandae corrupti molestias dolorum
+                        sunt adipisci obcaecati, alias delectus ipsa illo doloremque eum quam iusto atque debitis distinctio,
+                        natus qui! Cupiditate!</p>
+                </div>
+                <div class="col-sm-3 footer-item">
+                    <h3>Danh muc giam gia</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, repudiandae corrupti molestias dolorum
+                        sunt adipisci obcaecati, alias delectus ipsa illo doloremque eum quam iusto atque debitis distinctio,
+                        natus qui! Cupiditate!</p>
+                </div>
+    
+                <div class="col-sm-3 footer-item">
+                    <h3>Danh muc giam gia</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, repudiandae corrupti molestias dolorum
+                        sunt adipisci obcaecati, alias delectus ipsa illo doloremque eum quam iusto atque debitis distinctio,
+                        natus qui! Cupiditate!</p>
+                </div>
+                <div class="col-sm-3 footer-item">
+                    <h3>Danh muc giam gia</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, repudiandae corrupti molestias dolorum
+                        sunt adipisci obcaecati, alias delectus ipsa illo doloremque eum quam iusto atque debitis distinctio,
+                        natus qui! Cupiditate!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end Footer menu-->
+    
+    <div class="container-fluid" id="footer-copyright">
+        <div class="container">
+            @Design by ThoPN
+        </div>
+    </div>
+    <!--end Copyright-->
+</body>
+</html>
