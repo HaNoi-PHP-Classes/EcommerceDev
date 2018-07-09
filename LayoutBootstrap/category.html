@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +13,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="favicon.png">
     <script>
-        $(window).resize(function(){
-            if ($(this).width()<1024) {
+        $(window).resize(function () {
+            if ($(this).width() < 1024) {
                 //An|Hien|Add|Remove class cho menu-right khi thay doi kich thuoc man hinh
                 $("#right").hide();
                 $("div#product").removeClass("col-sm-9");
                 $("div#product").addClass("col-sm-12");
-                
+
                 //An|Hien|Add|Remove class cho menu-right khi thay doi kich thuoc man hinh
                 $("#service").hide();
                 $("div#slide-show-hot").removeClass("col-sm-9");
@@ -26,8 +27,7 @@
 
                 $("#search").hide();
             }
-            else
-            {
+            else {
                 $("#right").show();
                 $("div#product").removeClass("col-sm-12");
                 $("div#product").addClass("col-sm-9");
@@ -39,10 +39,8 @@
                 $("#search").show();
             }
         });
-        
-        
     </script>
-    <title>PHP coder - Trang chủ</title>
+    <title>San pham theo danh muc</title>
 </head>
 <body>
     <div class="container-fluid" id="header">
@@ -84,8 +82,9 @@
                 </div>
             </div>
         </div>
-    </div><!--end Header-->
-    
+    </div>
+    <!--end Header-->
+
     <nav class="navbar navbar-inverse" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -97,11 +96,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="index.html">
                         <span class="glyphicon glyphicon-home"></span>
                     </a>
                 </div>
-    
+
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
@@ -148,80 +147,54 @@
                 </div>
             </div>
         </div>
-    </nav><!--end Navigation bar-->
+    </nav>
+    <!--end Navigation bar-->
     
-    <div class="container-fluid">
-        <div class="container" id="slide-show">
-            <div class="row">
-                <div class="col-sm-9" id="slide-show-hot">
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img src="image/banner1.jpg" alt="Los Angeles" style="width:100%;">
-                            </div>
-                        
-                            <div class="item">
-                                <img src="image/banner2.png" alt="Chicago" style="width:100%;">
-                            </div>
-                        
-                            <div class="item">
-                                <img src="image/banner3.jpg" alt="New york" style="width:100%;">
-                            </div>
-                        </div>
-                        <!-- Left and right controls -->
-                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-3" id="service">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="service">
-                                <a href="#"><img src="image/service1.jpg" alt="Ưu đãi màu hè" width="100%"/></a>
-                            </div>
-                            <div class="service">
-                                <a href="#">
-                                    <div id="service2">
-                                        <i class="fa fa-gift" style="padding-right: 5%;"></i>
-                                        MUA TRẢ GÓP
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container-fluid" id="path">
+        <div class="container" id="path-content">
+            phpcoder.vn > Thời trang nam > Sơ mi Nam
         </div>
-    </div><!--end Slide show-->
+    </div>
+    <!--end Path-->
 
-    <div class="container" id="slide-product">
-        <div class="row">
-            <div class="col-sm-12">
-                
-            </div>
+    <div class="container-fluid" id="filter">
+        <div class="container" id="filter-content">
+            <table class="table table-bordered">
+                <tr>
+                    <td width="10%" class="lable">Danh mục</td>
+                    <td width="90%">
+                        <input type="checkbox" class="form-check-input" name="categoryId" id="categoryId" value="1"> Thời trang nam
+                        <input type="checkbox" name="categoryId" id="categoryId" value="0"> Thời trang nữ
+                    </td>
+                </tr>
+                <tr>
+                    <td width="10%" class="lable">Giá</td>
+                    <td width="90%">
+                        <input type="checkbox" name="price" id="price" value="l500"> Dưới 500K
+                        <input type="checkbox" name="price" id="price" value="500-1000"> Từ 500K - 1000K
+                    </td>
+                </tr>
+                <tr>
+                    <td width="10%" class="lable">Kích thước</td>
+                    <td width="90%">
+                        <input type="checkbox" name="size" id="size" value="s"> S
+                        <input type="checkbox" name="size" id="size" value="s"> M
+                        <input type="checkbox" name="size" id="size" value="s"> L
+                        <input type="checkbox" name="size" id="size" value="s"> XL
+                        <input type="checkbox" name="size" id="size" value="s"> XXL
+                    </td>
+                </tr>
+                <tr>
+                    <td width="10%" class="lable">Màu sắc</td>
+                    <td width="90%">
+                        Đỏ | Đen | Trắng | Hồng
+                    </td>
+                </tr>
+            </table>
         </div>
-    </div><!--end Slider product-->
-    
-    <div class="container-fluid">
-        <div class="container" id="product-header">
-            <div>
-                <i class="fa fa-list-alt" style="padding-right: 5px;"></i>
-                Sản phẩm mới</span>
-            </div>
-        </div>
-    </div><!--end Product header-->
-    
+    </div>
+    <!--end Filter-->
+
     <div class="container-fluid" id="product-list">
         <div class="container">
             <div class="row">
@@ -231,26 +204,9 @@
                             <div class="col-sm-3 item-product">
                                 <div class="grid" class="item-img">
                                     <figure class="effect-zoe">
-                                        <a href="detail.html"><img src="image/sale_pic5.jpg" alt="img25"/></a>
-                                        <figcaption>
-                                            <p>
-                                                <span><a href="#">Mua ngay</a></span>
-                                            </p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="item-name">
-                                    <a href="detail.html">Ao phong Levi's</a>
-                                </div>
-                                <div class="item-price">
-                                    <span class="new-price">200.000 đ</span>
-                                    <span class="old-price">250.000 đ</span>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 item-product">
-                                <div class="grid" class="item-img">
-                                    <figure class="effect-zoe">
-                                        <a href="detail.html"><img src="image/pic1.png" alt="img25" /></a>
+                                        <a href="detail.html">
+                                            <img src="image/sale_pic5.jpg" alt="img25" />
+                                        </a>
                                         <figcaption>
                                             <p>
                                                 <span>
@@ -271,7 +227,9 @@
                             <div class="col-sm-3 item-product">
                                 <div class="grid" class="item-img">
                                     <figure class="effect-zoe">
-                                        <a href="detail.html"><img src="image/sale_pic1.jpg" alt="img25" /></a>
+                                        <a href="detail.html">
+                                            <img src="image/pic1.png" alt="img25" />
+                                        </a>
                                         <figcaption>
                                             <p>
                                                 <span>
@@ -292,7 +250,9 @@
                             <div class="col-sm-3 item-product">
                                 <div class="grid" class="item-img">
                                     <figure class="effect-zoe">
-                                        <a href="detail.html"><img src="image/sale_pic2.jpg" alt="img25" /></a>
+                                        <a href="detail.html">
+                                            <img src="image/sale_pic1.jpg" alt="img25" />
+                                        </a>
                                         <figcaption>
                                             <p>
                                                 <span>
@@ -313,7 +273,9 @@
                             <div class="col-sm-3 item-product">
                                 <div class="grid" class="item-img">
                                     <figure class="effect-zoe">
-                                        <a href="detail.html"><img src="image/sale_pic3.jpg" alt="img25" /></a>
+                                        <a href="detail.html">
+                                            <img src="image/sale_pic2.jpg" alt="img25" />
+                                        </a>
                                         <figcaption>
                                             <p>
                                                 <span>
@@ -334,7 +296,9 @@
                             <div class="col-sm-3 item-product">
                                 <div class="grid" class="item-img">
                                     <figure class="effect-zoe">
-                                        <a href="detail.html"><img src="image/sale_pic9.jpg" alt="img25" /></a>
+                                        <a href="detail.html">
+                                            <img src="image/sale_pic3.jpg" alt="img25" />
+                                        </a>
                                         <figcaption>
                                             <p>
                                                 <span>
@@ -355,7 +319,9 @@
                             <div class="col-sm-3 item-product">
                                 <div class="grid" class="item-img">
                                     <figure class="effect-zoe">
-                                        <a href="detail.html"><img src="image/sale_pic12.jpg" alt="img25" /></a>
+                                        <a href="detail.html">
+                                            <img src="image/sale_pic9.jpg" alt="img25" />
+                                        </a>
                                         <figcaption>
                                             <p>
                                                 <span>
@@ -376,7 +342,32 @@
                             <div class="col-sm-3 item-product">
                                 <div class="grid" class="item-img">
                                     <figure class="effect-zoe">
-                                        <a href="detail.html"><img src="image/sale_pic6.jpg" alt="img25" /></a>
+                                        <a href="detail.html">
+                                            <img src="image/sale_pic12.jpg" alt="img25" />
+                                        </a>
+                                        <figcaption>
+                                            <p>
+                                                <span>
+                                                    <a href="#">Mua ngay</a>
+                                                </span>
+                                            </p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="item-name">
+                                    <a href="detail.html">Ao phong Levi's</a>
+                                </div>
+                                <div class="item-price">
+                                    <span class="new-price">200.000 đ</span>
+                                    <span class="old-price">250.000 đ</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 item-product">
+                                <div class="grid" class="item-img">
+                                    <figure class="effect-zoe">
+                                        <a href="detail.html">
+                                            <img src="image/sale_pic6.jpg" alt="img25" />
+                                        </a>
                                         <figcaption>
                                             <p>
                                                 <span>
@@ -396,70 +387,56 @@
                             </div>
                         </div>
                     </div>
-                    
+    
                 </div>
                 <div class="col-sm-3" id="right">
                     <div class="container-fluid" id="menu-right">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="menu-right-header">
-                                        <i class="fa fa-tags" style="padding-right: 2%;"></i>
-                                        Sản phẩm bán chạy nhất
-                                    </div>
-                                    <div class="menu-right-content">
-                                        <a href="#">
-                                            <div class="product-seller">
-                                                <div class="img-seller">
-                                                    <img src="image/sale_pic5.jpg" alt="img25" />
-                                                </div>
-                                                <div class="name-seller">
-                                                    Ao phong Levi's
-                                                </div>
-                                                <div class="price-seller">
-                                                    <span class="new">200.000 đ</span>
-                                                    <span class="old">250.000 đ</span>
-                                                </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="menu-right-header">
+                                    <i class="fa fa-tags" style="padding-right: 2%;"></i>
+                                    Sản phẩm bán chạy nhất
+                                </div>
+                                <div class="menu-right-content">
+                                    <a href="#">
+                                        <div class="product-seller">
+                                            <div class="img-seller">
+                                                <img src="image/sale_pic5.jpg" alt="img25" />
                                             </div>
-                                        </a>
-
-                                        <a href="#">
-                                            <div class="product-seller">
-                                                <div class="img-seller">
-                                                    <img src="image/sale_pic12.jpg" alt="img25" />
-                                                </div>
-                                                <div class="name-seller">
-                                                    Ao phong Levi's
-                                                </div>
-                                                <div class="price-seller">
-                                                    <span class="new">200.000 đ</span>
-                                                    <span class="old">250.000 đ</span>
-                                                </div>
+                                            <div class="name-seller">
+                                                Ao phong Levi's
                                             </div>
-                                        </a>
-
-                                        <a href="#">
-                                            <div class="product-seller">
-                                                <div class="img-seller">
-                                                    <img src="image/sale_pic9.jpg" alt="img25" />
-                                                </div>
-                                                <div class="name-seller">
-                                                    Ao phong Levi's
-                                                </div>
-                                                <div class="price-seller">
-                                                    <span class="new">200.000 đ</span>
-                                                    <span class="old">250.000 đ</span>
-                                                </div>
+                                            <div class="price-seller">
+                                                <span class="new">200.000 đ</span>
+                                                <span class="old">250.000 đ</span>
                                             </div>
-                                        </a>
-                                    </div>
+                                        </div>
+                                    </a>
+    
+                                    <a href="#">
+                                        <div class="product-seller">
+                                            <div class="img-seller">
+                                                <img src="image/sale_pic12.jpg" alt="img25" />
+                                            </div>
+                                            <div class="name-seller">
+                                                Ao phong Levi's
+                                            </div>
+                                            <div class="price-seller">
+                                                <span class="new">200.000 đ</span>
+                                                <span class="old">250.000 đ</span>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div><!--end Product list-->
-    
+    </div>
+    <!--end Product list-->
+
     <div class="container-fluid" id="footer-menu">
         <div class="container">
             <div class="row">
@@ -475,7 +452,7 @@
                         sunt adipisci obcaecati, alias delectus ipsa illo doloremque eum quam iusto atque debitis distinctio,
                         natus qui! Cupiditate!</p>
                 </div>
-    
+
                 <div class="col-sm-3 footer-item">
                     <h3>Danh muc giam gia</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, repudiandae corrupti molestias dolorum
@@ -490,12 +467,15 @@
                 </div>
             </div>
         </div>
-    </div><!--end Footer menu-->
-    
+    </div>
+    <!--end Footer menu-->
+
     <div class="container-fluid" id="footer-copyright">
         <div class="container">
             @Design by ThoPN
         </div>
-    </div><!--end Copyright-->
+    </div>
+    <!--end Copyright-->
 </body>
+
 </html>

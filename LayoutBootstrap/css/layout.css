@@ -53,16 +53,29 @@
 .navbar{
     border-radius: 0px;
     min-height: 20px;
+    color: #fff;
 }
 nav.navbar-inverse{
     text-transform: uppercase;
+    background-color: #e4101c;
+    border: 1px solid #e4101c;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+    color:#fff;
+}
+.navbar-inverse .navbar-nav>li:hover{
+    background-color: #9c0b13;
 }
 nav{
     margin-bottom: 5px;
     z-index: 150;
-    box-shadow: 0 2px 3px rgba(0,0,0,.4);
+    /*box-shadow: 0 2px 3px rgba(0,0,0,.4);*/
+    color: #fff;
 }
-
+.navbar-inverse .navbar-brand{
+    color: #fff;
+}
 
 #slide-show{
     height: 220px;
@@ -229,16 +242,42 @@ nav{
     color:#000;
 }
 #footer-menu{
-    background-color:#333;
-    color:white;
+    background-color:rgb(235, 231, 231);
+    color:#000;
 }
 #footer-menu h3{
     text-transform: uppercase;
 }
 #footer-copyright{
     text-align: center;
-    background-color: #000;
-    color: #fff; 
+    background-color: #fff;
+    color: #000; 
     height: 50px;
     padding-top: 13px;
+}
+
+#path{
+    background-color: gainsboro;
+    color:#000;
+    margin-top: -20px;
+    line-height: 42px;
+}
+#path-content{
+    text-transform: uppercase;
+}
+#filter{
+    margin-top: 5px;
+}
+#filter #filter-content{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#filter-content td.lable{
+    background-color: #fffef6;
+    font-weight: bold;
+}
+
+#filter-content td input[type=checkbox]{
+    border: 1px solid gainsboro;
 }
