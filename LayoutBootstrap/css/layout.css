@@ -190,8 +190,19 @@ nav{
 #right{
     padding-left: 0px;
     padding-right: 15px;
+    float: right;
 }
-
+.fixed-menu{
+    position: fixed;
+    top: 0px;
+    z-index: 99999;
+    width: 100%;
+}
+.fixed-right{
+    position: sticky;
+    top: 50px;
+    z-index: 99999;
+}
 #menu-right{
     border: 1px solid gainsboro;
     position: relative;

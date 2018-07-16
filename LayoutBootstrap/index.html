@@ -12,34 +12,55 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="favicon.png">
     <script>
-        $(window).resize(function(){
-            if ($(this).width()<1024) {
-                //An|Hien|Add|Remove class cho menu-right khi thay doi kich thuoc man hinh
-                $("#right").hide();
-                $("div#product").removeClass("col-sm-9");
-                $("div#product").addClass("col-sm-12");
-                
-                //An|Hien|Add|Remove class cho menu-right khi thay doi kich thuoc man hinh
-                $("#service").hide();
-                $("div#slide-show-hot").removeClass("col-sm-9");
-                $("div#slide-show-hot").addClass("col-sm-12");
+        $(document).ready(function () {
+            $(window).resize(function(){
+                if ($(this).width()<1024) {
+                    //An|Hien|Add|Remove class cho menu-right khi thay doi kich thuoc man hinh
+                    $("#right").hide();
+                    $("div#product").removeClass("col-sm-9");
+                    $("div#product").addClass("col-sm-12");
+                    
+                    //An|Hien|Add|Remove class cho menu-right khi thay doi kich thuoc man hinh
+                    $("#service").hide();
+                    $("div#slide-show-hot").removeClass("col-sm-9");
+                    $("div#slide-show-hot").addClass("col-sm-12");
 
-                $("#search").hide();
-            }
-            else
-            {
-                $("#right").show();
-                $("div#product").removeClass("col-sm-12");
-                $("div#product").addClass("col-sm-9");
+                    $("#search").hide();
+                }
+                else
+                {
+                    $("#right").show();
+                    $("div#product").removeClass("col-sm-12");
+                    $("div#product").addClass("col-sm-9");
 
-                $("#service").show();
-                $("div#slide-show-hot").removeClass("col-sm-12");
-                $("div#slide-show-hot").addClass("col-sm-9");
+                    $("#service").show();
+                    $("div#slide-show-hot").removeClass("col-sm-12");
+                    $("div#slide-show-hot").addClass("col-sm-9");
 
-                $("#search").show();
-            }
-        });
-        
+                    $("#search").show();
+                }
+            });
+            
+            var m = $("#menu");
+            var r = $("#right");
+            var pos_menu = m.position();
+            var pos_right = r.position();
+            $(window).scroll(function () {
+                var windowpos = $(window).scrollTop();
+                if (windowpos >= pos_menu.top) {
+                    m.addClass("fixed-menu");
+                } else {
+                    m.removeClass("fixed-menu");
+                }
+
+                if(windowpos >= pos_right.top){
+                    r.addClass("fixed-right");
+                }else{
+                    r.removeClass("fixed-right");
+                }
+            });
+
+    });     
         
     </script>
     <title>PHP coder - Trang chủ</title>
@@ -86,7 +107,7 @@
         </div>
     </div><!--end Header-->
     
-    <nav class="navbar navbar-inverse" role="navigation">
+    <nav class="navbar navbar-inverse" id="menu" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="container">
@@ -422,35 +443,7 @@
                                             </div>
                                         </a>
 
-                                        <a href="#">
-                                            <div class="product-seller">
-                                                <div class="img-seller">
-                                                    <img src="image/sale_pic12.jpg" alt="img25" />
-                                                </div>
-                                                <div class="name-seller">
-                                                    Ao phong Levi's
-                                                </div>
-                                                <div class="price-seller">
-                                                    <span class="new">200.000 đ</span>
-                                                    <span class="old">250.000 đ</span>
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                        <a href="#">
-                                            <div class="product-seller">
-                                                <div class="img-seller">
-                                                    <img src="image/sale_pic9.jpg" alt="img25" />
-                                                </div>
-                                                <div class="name-seller">
-                                                    Ao phong Levi's
-                                                </div>
-                                                <div class="price-seller">
-                                                    <span class="new">200.000 đ</span>
-                                                    <span class="old">250.000 đ</span>
-                                                </div>
-                                            </div>
-                                        </a>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -492,7 +485,7 @@
         </div>
     </div><!--end Footer menu-->
     
-    <div class="container-fluid" id="footer-copyright">
+    <div class="container-fluid fixed-bottom" id="footer-copyright">
         <div class="container">
             @Design by ThoPN
         </div>
